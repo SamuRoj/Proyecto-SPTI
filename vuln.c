@@ -2,12 +2,13 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 
 void vuln (char *arg)
 {
         char buffer[500];
 
-        strcpy(buffer, arg);
+        strlcpy(buffer, arg, 500);
 }
 
 int main(int argc, char **argv){
