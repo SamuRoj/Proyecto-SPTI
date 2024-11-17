@@ -8,7 +8,7 @@ void vuln (char *arg)
 {
         char buffer[500];
 
-        strlcpy(buffer, arg, 500);
+        strcpy(buffer, arg);
 }
 
 int main(int argc, char **argv){
